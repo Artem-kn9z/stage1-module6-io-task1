@@ -23,13 +23,12 @@ public class FileReader {
             }
         } catch (IOException ex) {
 
-            System.out.println(ex.getMessage());
+            System.out.println(ex);
         }
 
         String[] words = text.split(": ");
 
         for (int i = 1; i < words.length; i++) {
-            //System.out.println(words[i - 1]);
             if (words[i - 1].equals("Name")) pf.setName(words[i]);
             if (words[i - 1].equals("Age")) pf.setAge(Integer.parseInt(words[i]));
             if (words[i - 1].equals("Email")) pf.setEmail(words[i]);
